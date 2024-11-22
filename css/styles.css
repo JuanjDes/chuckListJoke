@@ -27,5 +27,33 @@ button:hover {
   background-color: #0056b3;
 }
 
+#fetchJoke {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #ec0505;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#fetchJoke:hover {
+  background-color: #813f3f;
+}
+
+.chiste {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+
+}
+
 
 
