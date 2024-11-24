@@ -5,6 +5,7 @@ const listaChistes = document.getElementById('jokeList');
 let chistesNum = 0;
 
 
+
 // --------------------------------  FUNCION PARA LLAMAR A LA API DE CHUCK NORRIS -----------------------------
 function obtenerChiste() {
     fetch('https://api.chucknorris.io/jokes/random')
@@ -65,6 +66,7 @@ function creaLiChistes(chistesNum, chiste) {
 }
 
 
+
 // --------------------------------  FUNCIONES PARA LOS DIFERENTES BOTONES  -----------------------------
 botonChiste.addEventListener('click', () => {
     obtenerChiste();
@@ -80,7 +82,6 @@ borrarLista.addEventListener('click', () => {
 
 // -----------------------------   RECARGAR PÁGINA Y CARGAR CHISTES ALMACENADOS EN LOCALSTORAGE   -----------------------------
 window.addEventListener('DOMContentLoaded', () => {
-
     const numero = localStorage.getItem('numero');
     if (numero) {
         chistesNum = numero;
@@ -90,7 +91,5 @@ window.addEventListener('DOMContentLoaded', () => {
             const numeroChiste = key.replace('chiste', '');
             creaLiChistes(numeroChiste, chiste);
         });
-
-
     }
 });
