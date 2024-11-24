@@ -13,6 +13,16 @@ h1 {
   color: #333;
 }
 
+p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  text-align: center;
+  max-width: 500px;
+
+}
+
 button {
   margin-top: 10px;
   padding: 8px 16px;
@@ -41,6 +51,17 @@ button:hover {
   background-color: #813f3f;
 }
 
+.boton-borrar {
+  margin-top: 10px;
+  padding: 4px 8px;
+  font-size: 16px;
+  background-color: #ff0000;
+  color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .chiste {
   display: flex;
   flex-direction: column;
@@ -60,17 +81,6 @@ span {
   font-size: 14px;
   color: #ec0505;
 
-}
-
-.boton-borrar {
-  margin-top: 10px;
-  padding: 4px 8px;
-  font-size: 16px;
-  background-color: #ff0000;
-  color: #fff;
-  border: 1px solid black;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 
