@@ -25,7 +25,7 @@ function obtenerChiste() {
 
 
 
-// --------------------------------  FUNCION PARA MOSTRAR Y BORRAR CHISTES EN PANTALLA, LOCALSTORAGE Y ARRAYCHISTES  -----------------------------
+// --------------------------------  FUNCION PARA MOSTRAR CHISTES EN PANTALLA  -----------------------------
 function mostrarChistes(data) {
 
     // guardo en chiste data.value
@@ -35,8 +35,6 @@ function mostrarChistes(data) {
     // guardo en localStorage chiste y numero
     localStorage.setItem('chiste' + `${chistesNum}`, chiste);
     localStorage.setItem('numero', chistesNum);
-    console.log('chiste guardado en localstorage:');
-    console.log(localStorage);
 
     creaLiChistes(chistesNum, chiste);
 }
@@ -60,7 +58,6 @@ function creaLiChistes(chistesNum, chiste) {
 
     // Añadir evento al boton borrar para que al hacer click, se elimine el chiste de la lista
     botonBorrar.addEventListener('click', () => {
-        console.log('chiste vale: ' + chiste);
         const chisteId = elementoChiste.id;
         localStorage.removeItem(chisteId);
         listaChistes.removeChild(elementoChiste);
@@ -88,12 +85,9 @@ window.addEventListener('DOMContentLoaded', () => {
     if (numero) {
         chistesNum = numero;
         const claves = Object.keys(localStorage).filter((key) => key.startsWith('chiste'));
-        console.log('claves localStorage: ' + claves);
-
         claves.forEach((key) => {
             const chiste = localStorage.getItem(key);
             const numeroChiste = key.replace('chiste', '');
-            console.log('chiste recuperado de localstorage:'+ chiste);
             creaLiChistes(numeroChiste, chiste);
         });
 
